@@ -17,12 +17,3 @@
 	cy: 100px; /* Must be 1/2 of circle-container height */
 	transition: 0.5s ease-out;
 }
-
-@keyframes step {
-	0% {
-		stroke-dashoffset: 604px;
-	}
-	100% {
-		stroke-dashoffset: 0px;
-	}
-}
