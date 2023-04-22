@@ -1,0 +1,28 @@
+.circle-container {
+	height: 200px;
+	width: 200px;
+	background-color: gray;
+	transform: rotate(-90deg);
+	scale: -1 1 1;
+}
+
+#timer-circle {
+	stroke: black;
+	stroke-width: 4px;
+	fill: none;
+	stroke-dasharray: 604px; /* (2 * pi * radius) + stroke_width */
+	stroke-dashoffset: 0px;
+	r: 96px; /* desired_size - stroke_width */
+	cx: 100px; /* Must be 1/2 of circle-container width */
+	cy: 100px; /* Must be 1/2 of circle-container height */
+	transition: 0.5s ease-out;
+}
+
+@keyframes step {
+	0% {
+		stroke-dashoffset: 604px;
+	}
+	100% {
+		stroke-dashoffset: 0px;
+	}
+}
